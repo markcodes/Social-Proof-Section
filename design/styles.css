@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    /* neutral colors */
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("/images/bg-pattern-top-mobile.svg"), url("/images/bg-pattern-bottom-mobile.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 90%;
+}
+
+.headline-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.rating-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.rating-wrapper {
+    text-align: center;
+}
+
+.headline-title {
+    color: var(--very-dark-magenta);
+    font-size: 2.2em;
+    margin-top: 1em;
+}
+
+.headline-text {
+    color: var(--very-dark-magenta);
+    line-height: 1.6em;
+    font-weight: 500;
+    margin-top: 1em;
+}
+
+.rating-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0 2em;
+    width: 100%;
+}
+
+.rating {
+    padding: 1em 0;
+    margin: 0.5em 0;
+    background-color: var(--light-grayish-magenta);
+    border-radius: 0.5em;
+}
+
+.rating-text {
+    color: var(--very-dark-magenta);
+    font-weight: 700;
+    display: block;
+    padding-top: 0.8em;
+    font-size: 0.8em;
+}
+
+.comment-wrapper {
+    background-color: hsl(300, 43%, 22%);
+    border-radius: .5em;
+    margin: 1em 0;
+    padding: 1.7em;
+}
+
+.user-details {
+    display: flex;
+    align-items: center;
+    padding: 1em 0;
+}
+
+.user-info {
+    padding-left: 1.5em;
+}
+
+.user-photo {
+    width: 15%;
+    border-radius: 50%;
+}
+
+.user-name,
+.user-status {
+    display: block;
+    padding: 0.15em;
+}
+
+.user-name {
+    color: white;
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+.user-status {
+    color: hsl(333, 80%, 67%);
+    font-size: 0.9em;
+}
+
+.user-comment-details {
+    color: white;
+    line-height: 1.8em;
+    font-size: 0.9em;
+}
+
+@media (min-width: 650px) {
+    body {
+        justify-content: center;
+        background-image: url("/images/bg-pattern-top-desktop.svg"), url("/images/bg-pattern-bottom-desktop.svg");
+        background-repeat: no-repeat, no-repeat;
+        background-position: top left, bottom right;
+    }
+    .container {
+        max-width: 1150px;
+        justify-content: center;
+    }
+    .row-1 {
+        display: flex;
+        align-items: flex-start;
+    }
+    .row-2 {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 3em;
+    }
+    .headline-wrapper {
+        padding-right: 8em;
+    }
+    .headline-title,
+    .headline-text {
+        text-align: start;
+        margin: 0;
+    }
+    .headline-title {
+        padding: 0 4em 0 0;
+    }
+    .headline-text {
+        padding: 0;
+    }
+    .rating-wrapper {
+        margin: 0;
+    }
+    .rating {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .rating:nth-of-type(1) {
+        align-self: flex-start;
+    }
+    .rating:nth-of-type(2) {
+        align-self: center;
+    }
+    .rating:nth-of-type(3) {
+        align-self: flex-end;
+    }
+    .stars {
+        padding: 0 2em;
+    }
+    .rating-text {
+        padding: 0 3em 0 0;
+    }
+    .comment-wrapper:nth-of-type(1) {
+        margin-right: 1em;
+    }
+    .comment-wrapper:nth-of-type(2) {
+        margin: 2em 1em 0;
+    }
+    .comment-wrapper:nth-of-type(3) {
+        margin: 3em 0 0 1em;
+    }
+}
